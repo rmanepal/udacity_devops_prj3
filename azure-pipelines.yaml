@@ -43,11 +43,10 @@ stages:
       workingDirectory: '$(build.sourcesdirectory)'
       displayName: 'Run postman tests'
 
-    steps:
-      - task: PublishTestResults@2
-        displayName: 'Publish Test Results Results/result.xml'
-        inputs:
-          testResultsFiles: Results/junitReport.xml
+    - task: PublishTestResults@2
+      displayName: 'Publish Test Results Results/result.xml'
+      inputs:
+        testResultsFiles: Results/junitReport.xml
 
                  
           
