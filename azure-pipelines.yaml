@@ -46,8 +46,8 @@ stages:
     - task: PublishTestResults@2
       displayName: 'Publish Test Results Results/result.xml'
       inputs:
-        testResultsFiles: Results/junitReport.xml
-        searchFolder: '$(build.sourcesdirectory)'
+        testResultsFiles: junitReport.xml
+        searchFolder: '$(build.sourcesdirectory)/Results'
 
                  
           
