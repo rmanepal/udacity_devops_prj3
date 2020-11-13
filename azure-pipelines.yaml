@@ -40,11 +40,12 @@ stages:
     - script: |
           ls
           newman run Starter_APIs.postman_collection.json --reporters cli,junit --reporter-junit-export Results\junitReport.xml
+          ls
       workingDirectory: '$(build.sourcesdirectory)'
       displayName: 'Run postman tests'
 
     - task: PublishTestResults@2
-      displayName: 'Publish Test Results Results/result.xml'
+      displayName: 'Publish Test Results'
       inputs:
         testResultsFiles: junitReport.xml
         searchFolder: '$(build.sourcesdirectory)/Results'
