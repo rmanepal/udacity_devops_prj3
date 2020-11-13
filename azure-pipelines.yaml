@@ -31,15 +31,16 @@ stages:
     pool:
       name: Hosted Ubuntu 1604
     steps:
-      - task: Bash@3
-        displayName: 'Run post man tests'
-        inputs:
-         targetType: 'inline'
-         script: |
-              npm install -g newman
-               newman run Starter APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
-         workingDirectory: '$(build.sourcesdirectory)'
-         
+    - script: |
+          npm install -g newman
+      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      displayName: 'Install npm on Command Line Script'
+
+    - script: |
+          newman run Starter_APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
+      workingDirectory: '$(build.sourcesdirectory)'
+      displayName: 'Run postman tests'
+
 
                  
           
