@@ -39,7 +39,7 @@ stages:
 
     - script: |
           newman run Starter_APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
-      workingDirectory: '$(build.sourcesdirectory)'
+      workingDirectory: '$(Build.ArtifactStagingDirectory)'
       displayName: 'Run postman tests'
 
 
