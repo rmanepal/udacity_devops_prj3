@@ -47,8 +47,9 @@ stages:
     - task: PublishTestResults@2
       displayName: 'Publish Test Results'
       inputs:
-        testResultsFiles: junitReport.xml
+        testResultsFiles: 'junitReport.xml'
         testResultsFormat: 'JUnit'
+        testRunTitle: 'Postman API Test'
         searchFolder: '$(build.sourcesdirectory)'
         mergeTestResults: false
         publishRunAttachments: true 
