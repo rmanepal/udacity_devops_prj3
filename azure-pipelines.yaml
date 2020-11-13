@@ -33,7 +33,7 @@ stages:
     steps:
     - script: |
           npm install -g newman
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      workingDirectory: '$(build.sourcesdirectory)'
       displayName: 'Install npm on Command Line Script'
 
     - script: |
