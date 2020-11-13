@@ -47,6 +47,7 @@ stages:
       displayName: 'Publish Test Results Results/result.xml'
       inputs:
         testResultsFiles: Results/junitReport.xml
+        searchFolder: '$(build.sourcesdirectory)'
 
                  
           
