@@ -32,7 +32,8 @@ stages:
       name: Hosted Ubuntu 1604
     steps:
     - script: |
-          npm install -g newman
+          sudo npm install -g newman --unsafe-perm=true --allow-root
+          export PATH="/home/vsts/.local/bin:$PATH"
       workingDirectory: '$(build.sourcesdirectory)'
       displayName: 'Install npm on Command Line Script'
 
