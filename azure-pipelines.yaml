@@ -48,7 +48,10 @@ stages:
       displayName: 'Publish Test Results'
       inputs:
         testResultsFiles: junitReport.xml
+        testResultsFormat: 'JUnit'
         searchFolder: '$(build.sourcesdirectory)'
+        mergeTestResults: false
+        publishRunAttachments: true 
 
                  
           
