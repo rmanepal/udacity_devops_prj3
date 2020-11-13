@@ -39,7 +39,7 @@ stages:
 
     - script: |
           ls
-          newman run udacity_devops_prj3/Starter_APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
+          newman run Starter_APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
       workingDirectory: '$(build.sourcesdirectory)'
       displayName: 'Run postman tests'
 
