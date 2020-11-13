@@ -38,7 +38,7 @@ stages:
          script: |
               npm install -g newman
                newman run Starter APIs.postman_collection.json --reporters cli, junit --reporter-junit-export Results\junitReport.xml
-         workingDirectory: '$(System.DefaultWorkingDirectory)'
+         workingDirectory: '$(build.sourcesdirectory)'
          
 
                  
